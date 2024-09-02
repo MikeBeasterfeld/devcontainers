@@ -1,0 +1,11 @@
+services:
+  nginx:
+    image: "docker.io/library/nginx:1.24.0-alpine"
+    volumes:
+      - "/var/run/sockets:/var/run/sockets"
+  php:
+    image: "docker.io/library/php:8.3.11-fpm"
+    volumes:
+      - "/var/run/sockets:/var/run/sockets"
+  mariadb:
+    image: 'docker.io/library/mariadb:10.11.8'
